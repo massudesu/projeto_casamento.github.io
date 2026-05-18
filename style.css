@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+body{
+    background-color: #f7f5f2;
+    overflow: hidden;
+}
+
+.telaPrincipal{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #f7f5f2;
+    overflow: hidden;
+}
+
+
+.coracaoCentro{
+    position: absolute;
+    top: 20px;
+    left: 42%;
+    transform: translateX(-50%);
+    width: 455px;
+}
+
+.fraseCoracao{
+    position: absolute;
+    top: 20%;
+    left: 51%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fraseCoracao img{
+    width: 22px;
+    height: 22px;
+}
+
+.fraseCoracao h4{
+    font-size: 30px;
+    color: #7b6a58;
+    font-weight: 400;
+}
+
+
+.quadradoLogin{
+    position: absolute;
+    top: 250px;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+.quadradoLogin > img{
+    width: 600px;
+    height: 600px;
+}
+
+
+.Login{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.Login img:first-child{
+    width: 190px;
+    margin-bottom: 5px;
+}
+
+.Login h3{
+    font-size: 36px;
+    color: #7b6a58;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.Login h5{
+    font-size: 15px;
+    color: #8d8d8d;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.Login img:nth-of-type(2){
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+.Login h4{
+    font-size: 15px;
+    color: #7b6a58;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+
+.quadroLogin{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.quadroLogin img{
+    width: 100%;
+    height: 48px;
+}
+
+.quadroLogin h4{
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translateY(-50%);
+    color: #b1b1b1;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.retanguloMarrom{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.retanguloMarrom:hover{
+    transform: scale(1.02);
+}
+
+.retanguloMarrom img{
+    width: 100%;
+    height: 52px;
+}
+
+.retanguloMarrom h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.fotoCasal{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: px;
+    bottom: 0;
+}
+
+.fotoCasal img{
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.flores{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.flores img{
+    width: 100%;
+    opacity: 0.9;
+}
+
+/*
+@media (max-width: 1100px){
+
+    .fotoCasal img{
+        height: 75vh;
+        opacity: 0.35;
+    }
+
+    .quadradoLogin{
+        left: 50%;
+    }
+
+    .fraseCoracao{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 700px){
+
+    body{
+        overflow-y: auto;
+    }
+
+    .telaPrincipal{
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .coracaoCentro{
+        width: 90px;
+    }
+
+    .fraseCoracao{
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .quadradoLogin{
+        width: 90%;
+        top: 140px;
+    }
+
+    .quadradoLogin > img{
+        width: 100%;
+        height: auto;
+    }
+
+    .Login h3{
+        font-size: 28px;
+    }
+
+    .Login h5{
+        font-size: 14px;
+    }
+
+    .fotoCasal img{
+        position: absolute;
+        left: -120px;
+        bottom: 0;
+        height: 60vh;
+        opacity: 0.25;
+    }
+
+    .flores img{
+        width: 110px;
+    }
+}
+*/
