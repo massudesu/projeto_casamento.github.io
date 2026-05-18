@@ -114,15 +114,19 @@ body{
     height: 48px;
 }
 
-.quadroLogin h4{
+.quadroLogin input{
     position: absolute;
-    top: 50%;
-    left: 32%;
+    top: 42%;
+    left: 35%;
     transform: translateY(-50%);
-    color: #b1b1b1;
-    font-size: 14px;
+    color: black;
+    font-size: 15px;
     font-weight: 400;
     margin: 0;
+    border:none;
+    background-color: inherit;
+    text-decoration: none;
+    outline: none;
 }
 
 .retanguloMarrom{
@@ -141,16 +145,26 @@ body{
     height: 52px;
 }
 
-.retanguloMarrom h3{
+.retanguloMarrom button{
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
-    color: white;
+    background-color: #BE955F;/*#BE955F*/
     font-weight: 600;
     text-transform: capitalize;
     margin: 0;
+    border: none;
+   
+    outline: none;
+    cursor: pointer;
+}
+
+.retanguloMarrom a{
+    text-decoration: none;
+    color: white;
+ 
 }
 
 .fotoCasal{
