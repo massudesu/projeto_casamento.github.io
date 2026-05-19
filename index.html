@@ -1,40 +1,57 @@
 <!doctype html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casamento V & G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="coracao" aria-hidden="true"></div>
     <div class="telaPrincipal">
-        <img class="coracaoCentro" src="images/CoraçãoVG.png">
-        <div class="fraseCoracao">
-            <img src="images/coracao.png">
-            <h4>Sua presença já é o nosso maior presente!</h4>
-        </div>
-        <div class="quadradoLogin">
-            <img src="images/quadradoBranco.png">
-            <div class="Login">
-                <img src="images/coracaoRisc.png">
-                <h3>Bem-vindo!</h3>
-                <h5>Estamos muito felizes em compartilhar esse momento especial com você.</h5>
-                <img src="images/linhaCoracao.png">
-                <h4>Para começar, diga seu nome:</h4>
-                <div class="quadroLogin">
-                    <img src="images/quadroLogin.png">
-                    <input type="texto" placeholder="Digite seu nome" required>
-                </div>
-                <div class="retanguloMarrom">
-                    <img src="images/retanguloComecar.png">
-                    <kbd><button onclick="enviar"><a href="subpages/produtos.html">Começar</a></button></kbd>
-                </div>
-            </div>
-        </div>
+        
+        
         <div class="fotoCasal">
-            <img src="images/casal1.png">
+            <img src="images/casal1.png" alt="Foto do Casal">
         </div>
+
+        <div class="conteudoDireito">
+            
+            <div class="blocoConteudo">
+                
+                <img class="coracaoCentro" src="images/CoracaoVeG.png" alt="Logo V e G">
+
+                <div class="divCima">
+                    <div class="fraseCoracao">
+                        <img src="images/coracao.png" alt="Ícone coração">
+                        <h4>Sua presença já é o nosso maior presente!</h4>
+                    </div>
+                </div>
+
+                <div class="quadradoLogin">
+                    <div class="Login">
+                        <img src="images/coracaoRisc.png" class="decoracaoCima" alt="Coração decorativo">
+                        <h3>Bem-vindo!</h3>
+                        <h5>Estamos muito felizes em compartilhar esse momento especial com você.</h5>
+                        
+                        <img src="images/linhacoracao1.png" class="divCoracao" alt="Div">
+                        
+                        <label for="nome-usuario">Para começar, diga seu nome:</label>
+                        <input type="text" id="nome-usuario" placeholder="Digite seu nome" required>
+                        
+                        <a href="subpages/produtos.html" class="botaoComecar">Começar</a>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+
         <div class="flores">
-            <img src="images/flor.png">   
+            <img src="images/flor.png" alt="Flores decorativas">
         </div>
+        
     </div>
-    <script src="javas.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,264 +1,243 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: #f7f5f2;
+body {
+    background-color: #f5f2ec;
     overflow: hidden;
 }
+.coracao {
+  width: 100%;
+  height: 100%;
+  display: inline-grid;
+  place-items: center;
+  filter: drop-shadow(0 0 20px rgba(255, 55, 95, .45));
+  margin-bottom: 16px;
+  animation: batida 1.2s infinite ease-in-out;
+}
 
-.telaPrincipal{
+.rastro {
+    position: absolute;
+    pointer-events: none; 
+    font-size: 20px;
+    z-index: 9999; 
+    user-select: none;
+    animation: sumirCoracao 0.65s forwards ease-out;
+}
+
+@keyframes sumirCoracao {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-20px);
+    }
+}
+
+
+.telaPrincipal {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: #f7f5f2;
-    overflow: hidden;
+    background-color: #f5f2ec;
+    display: flex;
 }
 
 
-.coracaoCentro{
+.fotoCasal {
     position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 1;
+}
+
+.fotoCasal img {
+    height: 100vh;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.conteudoDireito {
+    position: relative;
+    margin-left: auto; 
+    width: 55%;        
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding-right: 8%; 
+    z-index: 3;
+}
+
+
+.blocoConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 480px; 
+    
+}
+
+
+.coracaoCentro {
+    position: absolute;
+    right: 75%;
     top: 20px;
-    left: 42%;
-    transform: translateX(-50%);
-    width: 455px;
+    width: 455px; 
+    height: auto;
+    margin-bottom: 20px; 
 }
 
-.fraseCoracao{
-    position: absolute;
-    top: 20%;
-    left: 51%;
+
+.divCima {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+.fraseCoracao {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
-.fraseCoracao img{
-    width: 22px;
-    height: 22px;
+.fraseCoracao img {
+    width: 14px;
+    height: 14px;
 }
 
-.fraseCoracao h4{
-    font-size: 30px;
+.fraseCoracao h4 {
+    font-size: 20px; 
     color: #7b6a58;
     font-weight: 400;
+    
 }
 
 
-.quadradoLogin{
-    position: absolute;
-    top: 250px;
-    left: 65%;
-    transform: translateX(-50%);
+.quadradoLogin {
+    background: #ffffff;
+    width: 100%; 
+    padding: 45px 40px;
+    border-radius: 24px; 
+    box-shadow: 0px 15px 35px rgba(123, 106, 88, 0.06); 
 }
 
-.quadradoLogin > img{
-    width: 600px;
-    height: 600px;
-}
-
-
-.Login{
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.Login img:first-child{
-    width: 190px;
-    margin-bottom: 5px;
+.decoracaoCima {
+    width: 15vh;
+    margin-bottom: 1px;
+    
 }
 
-.Login h3{
-    font-size: 36px;
-    color: #7b6a58;
-    margin-bottom: 15px;
+.Login h3 {
+    font-size: 30px;
+    color: #635343;
+    margin-bottom: 8px;
     font-weight: 500;
 }
 
-.Login h5{
-    font-size: 15px;
-    color: #8d8d8d;
-    line-height: 22px;
+.Login h5 {
+    font-size: 13px;
+    color: #8f8f8f;
+    line-height: 1.5;
     font-weight: 400;
     margin-bottom: 18px;
+    max-width: 90%;
 }
 
-.Login img:nth-of-type(2){
-    width: 160px;
+.divCoracao {
+    width: 30vh;
     margin-bottom: 20px;
 }
 
-.Login h4{
-    font-size: 15px;
+.Login label {
+    font-size: 13px;
     color: #7b6a58;
     margin-bottom: 12px;
     font-weight: 500;
 }
 
 
-.quadroLogin{
-    position: relative;
+.Login input {
     width: 100%;
+    height: 46px;
+    border: 1px solid #e5dfd5;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+    background-color: #ffffff;
     margin-bottom: 20px;
 }
 
-.quadroLogin img{
+.Login input::placeholder {
+    color: #c5bfb5;
+}
+
+.Login input:focus {
+    border-color: #BE955F;
+}
+
+
+.botaoComecar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 48px;
-}
-
-.quadroLogin input{
-    position: absolute;
-    top: 42%;
-    left: 35%;
-    transform: translateY(-50%);
-    color: black;
-    font-size: 15px;
-    font-weight: 400;
-    margin: 0;
-    border:none;
-    background-color: inherit;
+    background-color: #BE955F;
+    color: #ffffff;
     text-decoration: none;
-    outline: none;
-}
-
-.retanguloMarrom{
-    position: relative;
-    width: 100%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.retanguloMarrom:hover{
-    transform: scale(1.02);
-}
-
-.retanguloMarrom img{
-    width: 100%;
-    height: 52px;
-}
-
-.retanguloMarrom button{
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    background-color: #BE955F;/*#BE955F*/
+    font-size: 16px;
     font-weight: 600;
-    text-transform: capitalize;
-    margin: 0;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
     border: none;
-   
-    outline: none;
     cursor: pointer;
 }
 
-.retanguloMarrom a{
-    text-decoration: none;
-    color: white;
- 
+.botaoComecar:hover {
+    background-color: #aa814c;
+    transform: scale(1.01);
 }
 
-.fotoCasal{
+
+.flores {
     position: absolute;
-    top: 40px;
-    left: 0px;
-    right: px;
+    right: 0;
     bottom: 0;
+    height: 95vh;
+    z-index: 2;
+    pointer-events: none; 
 }
 
-.fotoCasal img{
+.flores img {
     height: 100%;
+    width: auto;
     object-fit: contain;
 }
 
 
-.flores{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.flores img{
-    width: 100%;
-    opacity: 0.9;
-}
-
-/*
-@media (max-width: 1100px){
-
-    .fotoCasal img{
-        height: 75vh;
-        opacity: 0.35;
-    }
-
-    .quadradoLogin{
-        left: 50%;
-    }
-
-    .fraseCoracao{
-        left: 50%;
-        transform: translateX(-50%);
+@media (max-width: 1280px) {
+    .conteudoDireito {
+        width: 60%;
+        padding-right: 4%;
     }
 }
-
-@media (max-width: 700px){
-
-    body{
-        overflow-y: auto;
-    }
-
-    .telaPrincipal{
-        min-height: 100vh;
-        padding-bottom: 50px;
-    }
-
-    .coracaoCentro{
-        width: 90px;
-    }
-
-    .fraseCoracao{
-        width: 90%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .quadradoLogin{
-        width: 90%;
-        top: 140px;
-    }
-
-    .quadradoLogin > img{
-        width: 100%;
-        height: auto;
-    }
-
-    .Login h3{
-        font-size: 28px;
-    }
-
-    .Login h5{
-        font-size: 14px;
-    }
-
-    .fotoCasal img{
-        position: absolute;
-        left: -120px;
-        bottom: 0;
-        height: 60vh;
-        opacity: 0.25;
-    }
-
-    .flores img{
-        width: 110px;
-    }
-}
-*/

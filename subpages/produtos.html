@@ -1,40 +1,135 @@
 <!doctype html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casamento V & G - Lista de Presentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
-    <div class="telaPrincipal">
-        <img class="coracaoCentro" src="../images/CoraçãoVG.png">
-        <div class="fraseCoracao">
-            <img src="../images/coracao.png">
-            <h4>Sua presença já é o nosso maior presente!</h4>
+
+    <header>
+        <h1>Escolha um presente para o casal</h1>
+        <div class="divcoracao">
+            <img src="../images/coracao.png" alt="Coração" class="icone-header">
         </div>
-        <div class="quadradoLogin">
-            <img src="../images/quadradoBranco.png">
-            <div class="Login">
-                <img src="../images/coracaoRisc.png">
-                <h3>Bem-vindo!</h3>
-                <h5>Estamos muito felizes em compartilhar esse momento especial com você.</h5>
-                <img src="images/linhaCoracao.png">
-                <h4>Para começar, diga seu nome:</h4>
-                <div class="quadroLogin">
-                    <img src="images/quadroLogin.png">
-            
-                    <h4>Digite seu nome</h4>
+        <p>Fique à vontade para escolher algo que vocês gostariam de nos presentear!</p>
+    </header>
+
+    <div class="principal">
+        
+        <aside class="painelLateral">
+            <div class="infoItem">
+                <div class="infoIcone">
+                    <img src="../images/presente.png" alt="presente">
                 </div>
-                <div class="retanguloMarrom">
-                    <img src="images/retanguloComecar.png">
-                    <h3>começar</h3>
+                <div class="infoTexto">
+                    <h3>Escolha com carinho</h3>
+                    <p>Cada presente faz a diferença!</p>
                 </div>
             </div>
-        </div>
-        <div class="fotoCasal">
-            <img src="images/casal1.png">
-        </div>
-        <div class="flores">
-            <img src="images/flor.png">   
-        </div>
+
+            <div class="infoItem">
+                <div class="infoIcone">
+                    <img src="../images/verificado.png" alt="verificado">
+                </div>
+                <div class="infoTexto">
+                    <h3>Compra segura</h3>
+                    <p>Ambiente 100% seguro e confiável.</p>
+                </div>
+            </div>
+
+            <div class="infoItem">
+                <div class="infoIcone">
+                    <img src="../images/heart.png" alt="coracao">
+                </div>
+                <div class="infoTexto">
+                    <h3>Obrigado!</h3>
+                    <p>Seu carrinho ficará para sempre em nosso coração</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="carrossel">
+            
+            <button class="botaoSeta" aria-label="Voltar presente">
+                <span>&lt;</span>
+            </button>
+
+            <div class="tabelaProdutos">
+                
+                <div class="cardProduto">
+                    <div class="foto">
+                        <img src="../images/sofa.png" alt="Sofa">
+                    </div>
+                    <h2 class="tituloProduto">Sofá Retrátil</h2>
+                    <div class="precoProduto">R$ 2.500,00</div>
+                    
+                    <div class="progressoTabela">
+                        <div class="barraFundo">
+                            <div class="barraPreenchimento" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="textoProgresso">Recebido: 1 de 2</div>
+                    
+                    <button class="botaoEscolher">Escolher</button>
+                </div>
+
+                <div class="cardProduto "><!--concluido-->
+                    <div class="foto">
+                        <img src="../images/airfr.png" alt="AirFryer">
+                    </div>
+                    <h2 class="tituloProduto">Air Fryer</h2>
+                    <div class="precoProduto">R$ 450,00</div>
+                    
+                    <div class="progressoTabela">
+                        <div class="barraFundo">
+                            <div class="barraPreenchimento" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div class="textoProgresso">Recebido: 1 de 1</div>
+                    <button class="botaoEscolher">Escolher</button>
+                    <!--
+                    <div class="botaoConcluido">
+                        ✓ Já escolhido
+                    </div>
+                    -->
+                </div>
+
+                <div class="cardProduto">
+                    <div class="foto">
+                        <img src="../images/batedeira.png" alt="Batedeira Planetária">
+                    </div>
+                    <h2 class="tituloProduto">Batedeira Planetária</h2>
+                    <div class="precoProduto">R$ 250,00</div>
+                    
+                    <div class="progressoTabela">
+                        <div class="barraFundo">
+                            <div class="barraPreenchimento" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="textoProgresso">Recebido: 0 de 1</div>
+                    
+                    <button class="botaoEscolher">Escolher</button>
+                </div>
+
+            </div>
+
+            <button class="botaoSeta" aria-label="Avançar presente">
+                <span>&gt;</span>
+            </button>
+
+        </main>
+
     </div>
+
+    <footer>
+        <div class="nomeCasal">
+            <img src="../images/vitorGulherme.png" alt="banner">
+        </div>
+    </footer>
+
+    <script src="produtos.js"></script>
 </body>
 </html>

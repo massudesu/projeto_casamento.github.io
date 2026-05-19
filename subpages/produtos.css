@@ -1,0 +1,341 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f2ec;
+    color: #635343;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+header {
+    text-align: center;
+    padding: 50px 20px 25px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #635343;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.divcoracao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 12px auto;
+    width: 100%;
+    max-width: 320px;
+}
+
+.divcoracao::before,
+.divcoracao::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #e5dfd5;
+}
+
+.divcoracao span {
+    color: #BE955F;
+    font-size: 15px;
+}
+
+header p {
+    font-size: 15px;
+    color: #7b6a58;
+    font-weight: 400;
+}
+
+
+.principal {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px 60px 40px;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+    align-items: flex-start;
+}
+
+
+.painelLateral {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-right: 1px solid #e5dfd5;
+    padding-right: 35px;
+    padding-top: 15px;
+    flex-shrink: 0;
+}
+
+.infoItem {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.infoIcone {
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(123, 106, 88, 0.04);
+    flex-shrink: 0;
+}
+
+.infoIcone span {
+    font-size: 18px;
+}
+
+.infoTexto h3 {
+    font-size: 14px;
+    color: #635343;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.infoTexto p {
+    font-size: 12px;
+    color: #8f8f8f;
+    line-height: 1.5;
+}
+
+
+.carrossel {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.tabelaProdutos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+
+.botaoSeta {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border: 1px solid #e5dfd5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 8px 20px rgba(123, 106, 88, 0.05);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.botaoSeta:hover {
+    border-color: #BE955F;
+    background-color: #fdfbf9;
+    transform: scale(1.04);
+}
+
+.botaoSeta span {
+    font-size: 16px;
+    color: #7b6a58;
+    font-weight: bold;
+}
+
+.cardProduto {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0px 12px 30px rgba(123, 106, 88, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardProduto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 16px 35px rgba(123, 106, 88, 0.08);
+}
+
+.foto {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.foto img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.tituloProduto {
+    width: 100%;
+    font-size: 16px;
+    color: #635343;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.precoProduto {
+    width: 100%;
+    font-size: 15px;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+
+.progressoTabela {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.barraFundo {
+    width: 100%;
+    height: 6px;
+    background-color: #f5f2ec;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.barraPreenchimento {
+    height: 100%;
+    background-color: #BE955F;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.cardProduto.concluido .barraPreenchimento {
+    background-color: #4CAF50;
+}
+
+.textoProgresso {
+    width: 100%;
+    font-size: 11px;
+    color: #8f8f8f;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+
+.botaoEscolher {
+    width: 100%;
+    height: 42px;
+    background-color: #BE955F;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.botaoEscolher:hover {
+    background-color: #aa814c;
+}
+
+.botaoConcluido {
+    width: 100%;
+    height: 42px;
+    background-color: #e2f0e4;
+    color: #2e7d32;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: default;
+}
+
+footer {
+    background-color: #ede8df;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e3dbcd;
+    margin-top: auto;
+}
+
+.nomeCasal {
+    font-size: 24px;
+    color: #be955f;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+@media (max-width: 1120px) {
+    .tabelaProdutos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+    .principal {
+        flex-direction: column;
+        padding: 0 20px 40px 20px;
+    }
+    .painelLateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5dfd5;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+    .tabelaProdutos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+    .tabelaProdutos { grid-template-columns: 1fr; }
+    header h1 { font-size: 26px; }
+}
+
+
+.rastro {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    z-index: 9999;
+    user-select: none;
+    animation: sumirCoracao 0.65s forwards ease-out;
+}
+
+@keyframes sumirCoracao {
+    0% { opacity: 1; transform: scale(1) translateY(0); }
+    100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
+}

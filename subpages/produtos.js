@@ -1,9 +1,11 @@
+// ==========================================
+// LÓGICA DO RASTRO DE CORAÇÕES EXTERNO
+// ==========================================
 let alvoX = window.innerWidth / 2;
 let alvoY = window.innerHeight / 2;
 let atualX = alvoX;
 let atualY = alvoY;
 const suavizacao = 0.15;
-const mostrarRastro = true;
 let ultimoTempoRastro = 0;
 
 window.addEventListener('mousemove', (e) => {
@@ -18,50 +20,28 @@ window.addEventListener('touchmove', (e) => {
 }, { passive: true });
 
 function animar() {
-
     atualX += (alvoX - atualX) * suavizacao;
     atualY += (alvoY - atualY) * suavizacao;
-
     const agora = performance.now();
     
-
-    if (mostrarRastro && agora - ultimoTempoRastro > 60 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 5)) {
+    // Verifica a distância e tempo para criar um rastro suave
+    if (agora - ultimoTempoRastro > 70 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 6)) {
         ultimoTempoRastro = agora;
         const rastro = document.createElement('div');
         rastro.className = 'rastro';
         rastro.textContent = '💖';
         
+        // Alinha perfeitamente com a ponta do cursor
         rastro.style.left = (atualX - 10) + 'px';
         rastro.style.top = (atualY - 10) + 'px';
         
         document.body.appendChild(rastro);
         
+        // Remove de forma limpa após o fim da animação CSS
         setTimeout(() => rastro.remove(), 650);
     }
-
     requestAnimationFrame(animar);
 }
 
+// Inicializa a animação cíclica
 requestAnimationFrame(animar);
-
-
-window.addEventListener('resize', () => {
-    atualX = window.innerWidth / 2;
-    atualY = window.innerHeight / 2;
-    alvoX = atualX;
-    alvoY = atualY;
-});
-
-const botaoComecar = document.querySelector('.botaoComecar');
-const inputNome = document.getElementById('nome-usuario');
-
-if (botaoComecar && inputNome) {
-    botaoComecar.addEventListener('click', (e) => {
-        if (inputNome.value.trim() === "") {
-            e.preventDefault();
-            alert("Por favor, digite seu nome antes de começar!");
-        } else {
-            localStorage.setItem('nomeConvidado', inputNome.value);
-        }
-    });
-}
