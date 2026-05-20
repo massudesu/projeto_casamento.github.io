@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f2ec;
+    color: #635343;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.containerLuaDeMel {
+    background: #FBFAF8;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 20px 50px rgba(123, 106, 88, 0.08);
+    z-index: 2;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.headerViagem {
+    width: 100%;
+}
+
+.imagemBanner {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fotoPaisagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoMontanha {
+    position: absolute;
+    top: 76%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoMontanha img {
+    width: 100%;
+}
+
+.iconeAviao {
+    margin-top: -30px;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 55px;
+    z-index: 3;
+}
+
+.iconeAviao img {
+    width: 40%;
+}
+
+h1 {
+    position:absolute;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    bottom: 58%;
+    left: 37%;
+}
+
+h1 span {
+    font-family: 'Ponomar', serif;
+    font-style: italic;
+    color: #be955f;
+}
+.mini-bandeira {
+    height: 24px;   
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;     
+    margin-left: 6px;
+}
+
+.descricaoViagem {
+    font-size: 14px;
+    color: #8f8f8f;
+    line-height: 1.6;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+
+.statusMeta {
+    padding: 0 60px;
+    margin-bottom: 40px;
+}
+
+.colunasValores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.blocoValor span {
+    font-size: 12px;
+    color: #635343;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blocoValor h3 {
+    font-family: 'Ponomar', serif;
+    font-size: 24px;
+    color: #be955f;
+}
+
+.progressoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.barraFundo {
+    width: 100%;
+    height: 12px;
+    background-color: #f5f2ec;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barraPreenchimento {
+    height: 100%;
+    background-color: #be955f;
+    border-radius: 10px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.porcentagem {
+    font-size: 12px;
+    color: #8f8f8f;
+    font-weight: 500;
+}
+
+
+.areaContribuicao {
+    padding: 0 80px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.valorMinimo {
+    font-size: 12px;
+    color: #8f8f8f;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.campoInput {
+    display: flex;
+    align-items: center;
+    background: #fdfbf9;
+    border: 1px solid #e5dfd5;
+    border-radius: 12px;
+    padding: 0 20px;
+    height: 55px;
+    margin-bottom: 25px;
+}
+
+.cifrao {
+    color: #c5bfb5;
+    margin-right: 15px;
+}
+
+#inputValor {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+    outline: none;
+}
+
+.botoesRapidos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.botaoValor {
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #e5dfd5;
+    border-radius: 8px;
+    color: #7b6a58;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.botaoValor:hover {
+    border-color: #be955f;
+    color: #be955f;
+}
+
+.botaoValor.selecionado {
+    background: #be955f;
+    color: #fff;
+    border-color: #be955f;
+}
+
+.botaoConfirmar {
+    width: 100%;
+    height: 55px;
+    background-color: #BE955F;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botaoConfirmar:hover {
+    background-color: #aa814c;
+}
+
+.floresDecorativas {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 30%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.floresDecorativas img {
+    width: 100%;
+}
+
+
+.rastro {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    z-index: 9999;
+    animation: sumirCoracao 0.65s forwards ease-out;
+}
+@keyframes sumirCoracao {
+    0% { opacity: 1; transform: scale(1) translateY(0); }
+    100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
+}

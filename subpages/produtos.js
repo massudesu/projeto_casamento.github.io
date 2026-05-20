@@ -1,6 +1,3 @@
-// ==========================================
-// LÓGICA DO RASTRO DE CORAÇÕES EXTERNO
-// ==========================================
 let alvoX = window.innerWidth / 2;
 let alvoY = window.innerHeight / 2;
 let atualX = alvoX;
@@ -24,24 +21,95 @@ function animar() {
     atualY += (alvoY - atualY) * suavizacao;
     const agora = performance.now();
     
-    // Verifica a distância e tempo para criar um rastro suave
-    if (agora - ultimoTempoRastro > 70 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 6)) {
+    if (agora - ultimoTempoRastro > 10 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 6)) {
         ultimoTempoRastro = agora;
         const rastro = document.createElement('div');
         rastro.className = 'rastro';
         rastro.textContent = '💖';
         
-        // Alinha perfeitamente com a ponta do cursor
         rastro.style.left = (atualX - 10) + 'px';
         rastro.style.top = (atualY - 10) + 'px';
         
         document.body.appendChild(rastro);
         
-        // Remove de forma limpa após o fim da animação CSS
         setTimeout(() => rastro.remove(), 650);
     }
     requestAnimationFrame(animar);
 }
 
-// Inicializa a animação cíclica
 requestAnimationFrame(animar);
+
+const tabelaProdutos = document.querySelector('.tabelaProdutos');
+const botoesSeta = document.querySelectorAll('.botaoSeta');
+
+botoesSeta[0].addEventListener('click', () => {
+    const card = document.querySelector('.cardProduto');
+    if (card) {
+        const larguraDeslocamento = card.offsetWidth + 24; 
+        
+        if (tabelaProdutos.scrollLeft <= 0) {
+            tabelaProdutos.scroll({
+                left: tabelaProdutos.scrollWidth,
+                behavior: 'smooth'
+            });
+        } else {
+            tabelaProdutos.scrollBy({
+                left: -larguraDeslocamento,
+                behavior: 'smooth'
+            });
+        }
+    }
+});
+
+botoesSeta[1].addEventListener('click', () => {
+    const card = document.querySelector('.cardProduto');
+    if (card) {
+        const larguraDeslocamento = card.offsetWidth + 24;
+        const fimAlcancado = tabelaProdutos.scrollLeft + tabelaProdutos.clientWidth >= tabelaProdutos.scrollWidth - 5;
+        
+        if (fimAlcancado) {
+            tabelaProdutos.scroll({
+                left: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            tabelaProdutos.scrollBy({
+                left: larguraDeslocamento,
+                behavior: 'smooth'
+            });
+        }
+    }
+});
+
+const intercalarSelecaoPresente = () => {
+    tabelaProdutos.addEventListener('click', (e) => {
+        if (e.target && e.target.classList.contains('botaoEscolher')) {
+            const botaoAtual = e.target;
+            const cardPai = botaoAtual.closest('.cardProduto');
+            
+            if (cardPai) {
+                cardPai.classList.add('concluido');
+                
+                const divConcluido = document.createElement('div');
+                divConcluido.className = 'botaoConcluido';
+                divConcluido.textContent = '✓ Já escolhido';
+                
+                botaoAtual.parentNode.replaceChild(divConcluido, botaoAtual);
+                
+                const textoProgresso = cardPai.querySelector('.textoProgresso');
+                const barraPreenchimento = cardPai.querySelector('.barraPreenchimento');
+                if (textoProgresso && barraPreenchimento) {
+                    const partesTexto = textoProgresso.textContent.split('de');
+                    if (partesTexto.length > 1) {
+                        const totalCotas = partesTexto[1].trim();
+                        textoProgresso.textContent = `Recebido: ${totalCotas} de ${totalCotas}`;
+                    }
+                    barraPreenchimento.style.width = '100%';
+                }
+            }
+        }
+    });
+};
+
+
+intercalarSelecaoPresente();

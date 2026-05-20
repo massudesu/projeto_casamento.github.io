@@ -234,10 +234,3 @@ body {
     object-fit: contain;
 }
 
-
-@media (max-width: 1280px) {
-    .conteudoDireito {
-        width: 60%;
-        padding-right: 4%;
-    }
-}

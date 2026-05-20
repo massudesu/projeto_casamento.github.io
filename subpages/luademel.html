@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua de Mel - Vitor & Guilherme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="luademel.css">
+</head>
+<body>
+
+    <div class="floresDecorativas" aria-hidden="true">
+        <img src="../images/florDireita.png" alt="Flores">
+    </div>
+
+    <div class="containerLuaDeMel">
+        
+        <header class="headerViagem">
+            <div class="imagemBanner">
+                <img src="../images/paisagem.png" alt="Paisagem Alpes Suíços" class="fotoPaisagem">
+                <div class="logoMontanha">
+                    <img src="../images/montanha.png "alt="Logo Montanha">
+                </div>
+            </div>
+            
+            <div class="iconeAviao">
+                <img src="../images/aviao.png" alt="Trilha de Avião">
+            </div>
+
+            <h1>Nossa Lua de Mel nos <span>Alpes Suíços<img src="../images/suica.png" alt="Suíça" class="mini-bandeira"></span></h1>
+            <p class="descricaoViagem">
+                Seu carinho também pode nos ajudar a viver esse sonho inesquecível!<br>
+                Estamos arrecadando contribuições para nossa lua de mel nos Alpes Suíços.
+            </p>
+        </header>
+
+        <section class="statusMeta">
+            <div class="colunasValores">
+                <div class="blocoValor">
+                    <span>Arrecadado até agora</span>
+                    <h3 id="valorArrecadado">R$ 6.200,00</h3>
+                </div>
+                <div class="blocoValor">
+                    <span>Meta da nossa viagem</span>
+                    <h3 id="valorMeta">R$ 20.000,00</h3>
+                </div>
+            </div>
+
+            <div class="progressoContainer">
+                <div class="barraFundo">
+                    <div id="barraPreenchimento" class="barraPreenchimento" style="width: 31%;"></div>
+                </div>
+                <span id="textoPorcentagem" class="porcentagem">31%</span>
+            </div>
+        </section>
+
+        <main class="areaContribuicao">
+            <h4>Quanto você gostaria de contribuir?</h4>
+            <span class="valorMinimo">Valor mínimo: R$ 100,00</span>
+
+            <div class="campoInput">
+                <span class="cifrao">R$</span>
+                <input type="text" id="inputValor" placeholder="100,00">
+            </div>
+
+            <div class="botoesRapidos">
+                <button class="botaoValor" data-valor="100,00">R$ 100,00</button>
+                <button class="botaoValor" data-valor="250,00">R$ 250,00</button>
+                <button class="botaoValor" data-valor="500,00">R$ 500,00</button>
+                 <button class="botaoValor" data-valor="1000,00">R$ 1000,00</button>
+            </div>
+
+            <button class="botaoConfirmar" id="botaoConfirmar">Contribuir para nossa lua de mel!</button>
+        </main>
+
+    </div>
+
+    <script src="luademel.js"></script>
+</body>
+</html>

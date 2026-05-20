@@ -3,7 +3,6 @@ let alvoY = window.innerHeight / 2;
 let atualX = alvoX;
 let atualY = alvoY;
 const suavizacao = 0.15;
-const mostrarRastro = true;
 let ultimoTempoRastro = 0;
 
 window.addEventListener('mousemove', (e) => {
@@ -18,14 +17,11 @@ window.addEventListener('touchmove', (e) => {
 }, { passive: true });
 
 function animar() {
-
     atualX += (alvoX - atualX) * suavizacao;
     atualY += (alvoY - atualY) * suavizacao;
-
     const agora = performance.now();
     
-
-    if (mostrarRastro && agora - ultimoTempoRastro > 10 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 5)) {
+    if (agora - ultimoTempoRastro > 10 && (Math.hypot(alvoX - atualX, alvoY - atualY) > 6)) {
         ultimoTempoRastro = agora;
         const rastro = document.createElement('div');
         rastro.className = 'rastro';
@@ -38,30 +34,7 @@ function animar() {
         
         setTimeout(() => rastro.remove(), 650);
     }
-
     requestAnimationFrame(animar);
 }
 
 requestAnimationFrame(animar);
-
-
-window.addEventListener('resize', () => {
-    atualX = window.innerWidth / 2;
-    atualY = window.innerHeight / 2;
-    alvoX = atualX;
-    alvoY = atualY;
-});
-
-const botaoComecar = document.querySelector('.botaoComecar');
-const inputNome = document.getElementById('nome-usuario');
-
-if (botaoComecar && inputNome) {
-    botaoComecar.addEventListener('click', (e) => {
-        if (inputNome.value.trim() === "") {
-            e.preventDefault();
-            alert("Por favor, digite seu nome antes de começar!");
-        } else {
-            localStorage.setItem('nomeConvidado', inputNome.value);
-        }
-    });
-}
